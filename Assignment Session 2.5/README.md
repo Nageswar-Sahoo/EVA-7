@@ -12,7 +12,7 @@ Build a Neural network which -
 
 **Approach**
 
-*Part -1 Creating the dataset-*
+***Part -1 Creating the dataset-***
 
 Essentially this problem has two parts - 
 1. Read the image and predict the label
@@ -29,7 +29,8 @@ To feed a random number in a neural network (from 0-9) one hot encoding approach
 4. Sum {int} - This acts as a label for random number
 
 
-*Part -2 Creating the Network class-*
+***Part -2 Creating the Network class-***
+
 The network class was created to take in two inputs
 1. The image -1x1x28x28 (-1 denotes the batch size)
 2. The one hot encoded random digit -1x1x10 (-1 denotes the batch size)
@@ -43,7 +44,7 @@ Map -2 This is a fully connected layer starting with -1x1x10 neurons and ending 
 The output of the network class is a list containing two tensors. One for image label and another for sum.
 
 
-*Part -3 Creating an object of the network class and training-*
+***Part -3 Creating an object of the network class and training-***
 
 The network is trained on a GPU (cuda) if available. Appropriate python rules are deployed to ensure appropriate data is extracted from list/tensor.
 The steps followed for training as below -
@@ -52,4 +53,3 @@ The steps followed for training as below -
 3. preds = network(images,rnd_number) - rerun predictions
 4. loss = F.cross_entropy(preds, labels) - calculate loss
 5. optimizer.zero_grad() - Remove existing gradients and repeat step 1
-
