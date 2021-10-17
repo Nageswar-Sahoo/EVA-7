@@ -141,6 +141,6 @@ Based on the derivative values for weights, the weights were adjusted using the 
 The below image shows how our excel performed - 
 
 
-![](/Images/Excel image - 1.png)
+![](/Images/Excel_image1.png)
 
 ![](/Images/Excel image - 2.png)
