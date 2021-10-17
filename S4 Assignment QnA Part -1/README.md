@@ -143,4 +143,4 @@ The below image shows how our excel performed -
 
 ![](/Images/Excel_image1.png)
 
-![](/Images/Excel image - 2.png)
+![](/Images/Excel_image1.png)
