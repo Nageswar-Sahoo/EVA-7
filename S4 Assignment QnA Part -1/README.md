@@ -1,6 +1,6 @@
 
 
-This excel sheet has Neural network calculations which takes in 2 inputs and has a two target outputs. Depending on the value of learning rate with each repetition the loss is minimized. Details of how this has been achieved is explained below. The below image shows the graphical representation of the network.
+This excel sheet has Neural network calculations which takes in 2 inputs and has two target outputs. Depending on the value of learning rate with each repetition the loss is minimized. Details of how this has been achieved is explained below. The below image shows the graphical representation of the network.
 
 ![](/Images/simple_perceptron_model.jpg)
 
