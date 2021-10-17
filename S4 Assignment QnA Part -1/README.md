@@ -5,7 +5,7 @@ This excel sheet has Neural network calculations which takes in 2 inputs and has
 ![](/Images/simple_perceptron_model.jpg)
 
 
-**The network has the following inputs, outputs and hidden layers.**
+## The network has the following inputs, outputs and hidden layers.
 
 *Neurons in input Layer*
 
@@ -48,9 +48,9 @@ t2 = .99
 This network needs to have its weight adjusted so that it can comes as close to the target values as possible.
 
 
-**Approach**
+## Approach
 
-*Part -1 The below steps show how the output a_o1 and a_o2 is derived.*
+### Part -1 The below steps show how the output a_o1 and a_o2 is derived.
 
 h1 = w1*i1 + w2*i2
 
@@ -69,7 +69,7 @@ a_o1 = σ(o1) = 1/(1 + exp(-o1))
 a_o2 = σ(o2) = 1/(1 + exp(-o2))
 
 
-*Part -2 The below steps how the loss is calculated*
+### Part -2 The below steps show how the loss is calculated
 
 E1 = 1/2*(t1-a_o1)²
 
@@ -77,7 +77,7 @@ E1 = 1/2*(t2-a_o2)²
 
 E_total = E1 + E2
 
-*Part -3 The below steps show how derivative of the error/loss is calculated with respect to the weights for the output layer*
+### Part -3 The below steps show how derivative of the error/loss is calculated with respect to the weights for the output layer
 
 Let us start with weight w5. The path to w5 from E_total is
 
@@ -104,7 +104,7 @@ Applying the same principle for w6, w7 and w8 we have -
 
 ∂E_t/∂w8 = (a_o2 - t2) * a_o2 * (1 - a_o2) * a_h2
 
-*Part -4 The below steps shows how derivative of the error/loss is calculated with respect to the weights for the hidden layer*
+### Part -4 The below steps shows how derivative of the error/loss is calculated with respect to the weights for the hidden layer
 
 Lets take the path from E_total to ah1
 
@@ -138,9 +138,10 @@ Having reached at the above level we can now write the derivative equation for w
 
 Based on the derivative values for weights, the weights were adjusted using the formula W_new = w_old - η*∂W_old where η is the learning rate the value used here is 0.5.
 
-The below image shows how our excel performed - 
+## The below image shows how our excel performed - 
 
 
 ![](/Images/Excel_image1.png)
+###
 
-![](/Images/Excel_image1.png)
+![](/Images/Excel_image2.png)
