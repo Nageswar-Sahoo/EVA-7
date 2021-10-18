@@ -151,29 +151,29 @@ Based on the derivative values for weights, the weights were adjusted using the 
 
 ## When η = 0.1
 
-![](/Images/Learning Rate 0_1.png)
+![](/Images/Learning_Rate_0_1.png)
 
 ## When η = 0.2
 
-![](/Images/Learning Rate 0_2.png)
+![](/Images/Learning_Rate_0_2.png)
 
 ## When η = 0.3
 
-![](/Images/Learning Rate 0_3.png)
+![](/Images/Learning_Rate_0_3.png)
 
 ## When η = 0.4
 
-![](/Images/Learning Rate 0_4.png)
+![](/Images/Learning_Rate_0_4.png)
 
 ## When η = 0.5
 
-![](/Images/Learning Rate 0_5.png)
+![](/Images/Learning_Rate_0_5.png)
 
 ## When η = 1
 
-![](/Images/Learning Rate 1.png)
+![](/Images/Learning_Rate_1.png)
 
 ## When η = 2
 
-![](/Images/Learning Rate 2.png)
+![](/Images/Learning_Rate_2.png)
 
