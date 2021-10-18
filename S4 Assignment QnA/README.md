@@ -175,3 +175,4 @@ Based on the derivative values for weights, the weights were adjusted using the 
 ## When η = 2
 
 ![](/Images/Learning_Rate_2.png)
+
