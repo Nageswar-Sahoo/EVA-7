@@ -142,6 +142,38 @@ Based on the derivative values for weights, the weights were adjusted using the 
 
 
 ![](/Images/Excel_image1.png)
-###
+### ------------------------------------------------------------------------------------------------------------------------
+
 
 ![](/Images/Excel_image2.png)
+
+### The below images show how the curve changes with respect to Learning rate
+
+## When η = 0.1
+
+![](/Images/Learning Rate 0_1.png)
+
+## When η = 0.2
+
+![](/Images/Learning Rate 0_2.png)
+
+## When η = 0.3
+
+![](/Images/Learning Rate 0_3.png)
+
+## When η = 0.4
+
+![](/Images/Learning Rate 0_4.png)
+
+## When η = 0.5
+
+![](/Images/Learning Rate 0_5.png)
+
+## When η = 1
+
+![](/Images/Learning Rate 1.png)
+
+## When η = 2
+
+![](/Images/Learning Rate 2.png)
+
