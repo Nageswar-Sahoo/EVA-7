@@ -35,6 +35,8 @@ The network class was created to take in two inputs
 1. The image -1x1x28x28 (-1 denotes the batch size)
 2. The one hot encoded random digit -1x1x10 (-1 denotes the batch size)
 
+In the code the batch size has been set to 128.
+
 Two separate sets maps were created one for the image another for the random number. Both the maps belong to the same network class but are not directly attached. They kind of run in parallel.
 
 Map -1 The image map has sets of convolution and maxpool layers to finally bring down the image to -1x10x1x1. 3x3 kernels were used throughout the network.
@@ -52,4 +54,4 @@ The steps followed for training as below -
 2. optimizer.step() -  set the weights
 3. preds = network(images,rnd_number) - rerun predictions
 4. loss = F.cross_entropy(preds, labels) - calculate loss
-5. optimizer.zero_grad() - Remove existing gradients and repeat step 1
+5. optimizer.zero_grad() - Remove existing gradients and repeat from step 1
