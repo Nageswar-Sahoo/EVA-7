@@ -135,3 +135,51 @@ Inference:
 1.	Overfitting is eliminated. In fact we see some underfitting.
 2.	Accuracy needs improvement. Accuracy has decreased as compared to Step -1.
 3.	From the training loss curve we see that reducing the learning rate might improve the training accuracy.
+
+## Step - 3
+
+Changes done: 
+1.	Adjust the network by shifting the Maxpool layer after 2 convolutions.
+2.	Reduce Parameters.
+3.	Introduce stepped reduction of learning rate.
+
+Model parameters
+
+<pre>
+
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv2d-1           [-1, 12, 26, 26]             108
+              ReLU-2           [-1, 12, 26, 26]               0
+            Conv2d-3           [-1, 24, 24, 24]           2,592
+              ReLU-4           [-1, 24, 24, 24]               0
+            Conv2d-5           [-1, 12, 24, 24]             288
+              ReLU-6           [-1, 12, 24, 24]               0
+         MaxPool2d-7           [-1, 12, 12, 12]               0
+            Conv2d-8           [-1, 12, 10, 10]           1,296
+              ReLU-9           [-1, 12, 10, 10]               0
+           Conv2d-10             [-1, 24, 8, 8]           2,592
+             ReLU-11             [-1, 24, 8, 8]               0
+           Conv2d-12             [-1, 10, 8, 8]             240
+             ReLU-13             [-1, 10, 8, 8]               0
+           Conv2d-14             [-1, 10, 8, 8]             100
+             ReLU-15             [-1, 10, 8, 8]               0
+        AvgPool2d-16             [-1, 10, 1, 1]               0
+================================================================
+Total params: 7,216
+Trainable params: 7,216
+Non-trainable params: 0
+----------------------------------------------------------------
+
+</pre>
+
+Results:
+1.	Parameters: 7216
+2.	Best Train Accuracy: 97.64
+3.	Best Test Accuracy: 97.53
+
+Inference:
+1.	Overfitting is eliminated. In fact we see some underfitting.
+2.	Accuracy needs improvement. Accuracy is almost same as compared to Step -2.
+
