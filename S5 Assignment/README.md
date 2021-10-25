@@ -22,7 +22,7 @@ Our approach would be to update the model and based on Train/test results necess
 ## Step - 1
 
 Changes done: 
-1.	The base version of the network has been cleaned
+1.	The base version of the network was cleaned
 2.	Parameters reduced from 6,379,786 to 13,312
 3.	Only basic transformations done to the original dataset like converting to tensor and normalizing
 
@@ -139,9 +139,9 @@ Inference:
 ## Step - 3
 
 Changes done: 
-1.	Adjust the network by shifting the Maxpool layer after 2 convolutions.
-2.	Reduce Parameters.
-3.	Introduce stepped reduction of learning rate.
+1.	Adjusted the network by shifting the Maxpool layer after 2 convolutions.
+2.	Reduced Parameters.
+3.	Introduced stepped reduction of learning rate.
 
 Model parameters
 
@@ -188,7 +188,7 @@ Inference:
 ## Step - 4
 
 Changes done: 
-1.	Introduce regularization methods like dropout and batch normalization.
+1.	Introduced regularization methods like dropout and batch normalization.
 2.	Continued with basic transformations done to the original dataset like converting to tensor and normalizing.
 
 Model parameters
@@ -243,3 +243,57 @@ Inference:
 1.	Marginal improvement in accuracy.
 2.	Model is underfitting
 
+## Step - 5
+
+Changes done: 
+1.	Updated the network to add more parameters
+2.	Shifted maxpool layer after 3 convolutions
+3.	Introduced Rotational Transformation
+4.	Removed Dropout
+
+Model parameters
+
+<pre>
+
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv2d-1            [-1, 8, 26, 26]              72
+              ReLU-2            [-1, 8, 26, 26]               0
+       BatchNorm2d-3            [-1, 8, 26, 26]              16
+            Conv2d-4           [-1, 16, 24, 24]           1,152
+              ReLU-5           [-1, 16, 24, 24]               0
+       BatchNorm2d-6           [-1, 16, 24, 24]              32
+            Conv2d-7           [-1, 32, 22, 22]           4,608
+              ReLU-8           [-1, 32, 22, 22]               0
+       BatchNorm2d-9           [-1, 32, 22, 22]              64
+           Conv2d-10            [-1, 8, 22, 22]             256
+             ReLU-11            [-1, 8, 22, 22]               0
+        MaxPool2d-12            [-1, 8, 11, 11]               0
+           Conv2d-13             [-1, 16, 9, 9]           1,152
+             ReLU-14             [-1, 16, 9, 9]               0
+      BatchNorm2d-15             [-1, 16, 9, 9]              32
+           Conv2d-16             [-1, 32, 7, 7]           4,608
+             ReLU-17             [-1, 32, 7, 7]               0
+      BatchNorm2d-18             [-1, 32, 7, 7]              64
+           Conv2d-19             [-1, 10, 7, 7]             320
+             ReLU-20             [-1, 10, 7, 7]               0
+      BatchNorm2d-21             [-1, 10, 7, 7]              20
+        AvgPool2d-22             [-1, 10, 1, 1]               0
+================================================================
+Total params: 12,396
+Trainable params: 12,396
+Non-trainable params: 0
+----------------------------------------------------------------
+
+</pre>
+
+Results:
+1.	Parameters: 12396
+2.	Best Train Accuracy: 99.21
+3.	Best Test Accuracy: 99.41
+
+Inference:
+1.	The model parameters are slightly more than 10k.
+2.	The model shows consistant 99.4% accuracy for last few epochs.
+3.	The difference between training and test accuracy is also minimal.
