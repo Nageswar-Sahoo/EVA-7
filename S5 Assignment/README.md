@@ -93,7 +93,7 @@ Inference:
 
 Changes done: 
 1.	Reduced parameters by introducing GAP layer.
-2.	Continued basic transformations done to the original dataset like converting to tensor and normalizing.
+2.	Continued with basic transformations done to the original dataset like converting to tensor and normalizing.
 
 Model parameters
 
@@ -180,6 +180,66 @@ Results:
 3.	Best Test Accuracy: 97.53
 
 Inference:
-1.	Overfitting is eliminated. In fact we see some underfitting.
-2.	Accuracy needs improvement. Accuracy is almost same as compared to Step -2.
+
+1.	Further reduction of model parameters is not helping.
+2.	Overfitting is eliminated. In fact we see some underfitting.
+3.	Accuracy needs improvement. Accuracy is almost same as compared to Step -2.
+
+## Step - 4
+
+Changes done: 
+1.	Introduce regularization methods like dropout and batch normalization.
+2.	Continued with basic transformations done to the original dataset like converting to tensor and normalizing.
+
+Model parameters
+
+<pre>
+
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv2d-1           [-1, 12, 26, 26]             108
+              ReLU-2           [-1, 12, 26, 26]               0
+       BatchNorm2d-3           [-1, 12, 26, 26]              24
+           Dropout-4           [-1, 12, 26, 26]               0
+            Conv2d-5           [-1, 24, 24, 24]           2,592
+              ReLU-6           [-1, 24, 24, 24]               0
+       BatchNorm2d-7           [-1, 24, 24, 24]              48
+           Dropout-8           [-1, 24, 24, 24]               0
+            Conv2d-9           [-1, 12, 24, 24]             288
+             ReLU-10           [-1, 12, 24, 24]               0
+        MaxPool2d-11           [-1, 12, 12, 12]               0
+           Conv2d-12           [-1, 12, 10, 10]           1,296
+             ReLU-13           [-1, 12, 10, 10]               0
+      BatchNorm2d-14           [-1, 12, 10, 10]              24
+          Dropout-15           [-1, 12, 10, 10]               0
+           Conv2d-16             [-1, 24, 8, 8]           2,592
+             ReLU-17             [-1, 24, 8, 8]               0
+      BatchNorm2d-18             [-1, 24, 8, 8]              48
+          Dropout-19             [-1, 24, 8, 8]               0
+           Conv2d-20             [-1, 10, 8, 8]             240
+             ReLU-21             [-1, 10, 8, 8]               0
+      BatchNorm2d-22             [-1, 10, 8, 8]              20
+          Dropout-23             [-1, 10, 8, 8]               0
+           Conv2d-24             [-1, 10, 8, 8]             100
+             ReLU-25             [-1, 10, 8, 8]               0
+      BatchNorm2d-26             [-1, 10, 8, 8]              20
+          Dropout-27             [-1, 10, 8, 8]               0
+        AvgPool2d-28             [-1, 10, 1, 1]               0
+================================================================
+Total params: 7,400
+Trainable params: 7,400
+Non-trainable params: 0
+----------------------------------------------------------------
+
+</pre>
+
+Results:
+1.	Parameters: 7400
+2.	Best Train Accuracy: 98.2
+3.	Best Test Accuracy: 98.7
+
+Inference:
+1.	Marginal improvement in accuracy.
+2.	Model is underfitting
 
