@@ -7,9 +7,9 @@ MNIST ("Modified National Institute of Standards and Technology") dataset of com
 
 ![image](https://user-images.githubusercontent.com/70502759/137764343-c1134fa1-94d2-40b0-bf21-dcd78b3ed4e1.png)
   
-  This project will automatically dowload and process the MNIST dataset
+  This project will automatically download and process the MNIST dataset
   
-  Design the model architecture for MNIST with following constraint :
+  Design the model architecture for MNIST with following constraints:
     
     99.4% validation accuracy
     Less than 10k Parameters
