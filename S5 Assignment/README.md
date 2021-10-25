@@ -24,6 +24,7 @@ Our approach would be to update the model and based on Train/test results necess
 Changes done: 
 1.	The base version of the network has been cleaned
 2.	Parameters reduced from 6,379,786 to 13,312
+3.	Only basic transformations done to the original dataset like converting to tensor and normalizing
 
 Base Model parameters:
 <pre>
@@ -84,5 +85,53 @@ Results:
 3.	Best Test Accuracy: 98.70
 
 Inference:
-4.	The model is still large but working. 
-5.	We see some over-fitting
+1.	The model is still large but working. 
+2.	We see some over-fitting
+
+
+## Step - 2
+
+Changes done: 
+1.	Reduced parameters by introducing GAP layer.
+2.	Continued basic transformations done to the original dataset like converting to tensor and normalizing.
+
+Model parameters
+
+<pre>
+
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv2d-1           [-1, 12, 26, 26]             108
+              ReLU-2           [-1, 12, 26, 26]               0
+            Conv2d-3           [-1, 12, 24, 24]           1,296
+              ReLU-4           [-1, 12, 24, 24]               0
+            Conv2d-5           [-1, 24, 22, 22]           2,592
+              ReLU-6           [-1, 24, 22, 22]               0
+         MaxPool2d-7           [-1, 24, 11, 11]               0
+            Conv2d-8           [-1, 12, 11, 11]             288
+              ReLU-9           [-1, 12, 11, 11]               0
+           Conv2d-10             [-1, 12, 9, 9]           1,296
+             ReLU-11             [-1, 12, 9, 9]               0
+           Conv2d-12             [-1, 24, 7, 7]           2,592
+             ReLU-13             [-1, 24, 7, 7]               0
+           Conv2d-14             [-1, 10, 7, 7]             240
+             ReLU-15             [-1, 10, 7, 7]               0
+        AvgPool2d-16             [-1, 10, 1, 1]               0
+================================================================
+Total params: 8,412
+Trainable params: 8,412
+Non-trainable params: 0
+----------------------------------------------------------------
+
+</pre>
+
+Results:
+1.	Parameters: 8412
+2.	Best Train Accuracy: 97.32
+3.	Best Test Accuracy: 97.53
+
+Inference:
+1.	Overfitting is eliminated. In fact we see some underfitting.
+2.	Accuracy needs improvement. Accuracy has decreased as compared to Step -1.
+3.	From the training loss curve we see that reducing the learning rate might improve the training accuracy.
