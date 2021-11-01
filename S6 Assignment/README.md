@@ -25,7 +25,7 @@ Model parameteres and output as below.
 
 ### Version -1 (Model with BN + L1)
 <pre>
-The model parameters for Batch Mormalization
+The model parameters for Batch Normalization
 
 ----------------------------------------------------------------
         Layer (type)               Output Shape         Param #
@@ -183,9 +183,41 @@ Estimated Total Size (MB): 0.47
 
 </pre>
 
-## Model Rseults
+## Model Results
 
 ### Test/Validation Loss for all 3 models together
 
 ![](/Images/S6_Images/Loss_Curve.jpg)
 
+
+### Test/Validation Accuracy for all 3 models together
+
+![](/Images/S6_Images/Acc_Curve.jpg)
+
+
+### Train/Test Results for Version -1 (BN + L1 Model)
+![](/Images/S6_Images/BN_Curve.png)
+
+### Train/Test Results for Version -2 (Layer Normalization Model)
+![](/Images/S6_Images/LN_Curve.png)
+
+### Train/Test Results for Version -1 (Group Normalization Model)
+![](/Images/S6_Images/GN_Curve.png)
+
+
+
+## Misclassified Images
+
+### Images misclassified by Version -1 Model (BN + L1)
+![](/Images/S6_Images/BN_Unclassified.jpg)
+### Images misclassified by Version -2 Model (Layer Normalization)
+![](/Images/S6_Images/LN_Unclassified.jpg)
+### Images misclassified by Version -3 Model (Group Normalization)
+![](/Images/S6_Images/GN_Unclassified.jpg)
+
+
+
+## Inference
+
+The BN + L1 model behaves poorly. Probably because the L1 regularization is removing key/important features.
+The LN and GN model are quite robust and fails on extreme cases as seen on the  misclassified examples.
