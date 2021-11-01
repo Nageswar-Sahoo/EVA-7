@@ -187,4 +187,4 @@ Estimated Total Size (MB): 0.47
 
 ### Test/Validation Loss for all 3 models together
 
-![](/Images/S6_Images/Loss Curve.jpg)
+![](/Images/S6_Images/Loss_Curve.jpg)
