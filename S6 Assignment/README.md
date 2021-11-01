@@ -231,3 +231,13 @@ Estimated Total Size (MB): 0.47
 
 The BN + L1 model behaves poorly. Probably because the L1 regularization is removing key/important features.
 The LN and GN model are quite robust and fails on extreme cases as seen on the  misclassified examples.
+
+
+## Team Members
+Member 1: Moulipriya Pal
+
+Member 2: Rahul Tyagi
+
+Member 3: Vyas Dhruv
+
+Member 4: Nageswar Sahoo
