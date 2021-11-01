@@ -8,6 +8,13 @@ To create 3 versions of models with the best network developed so far.
 - Version 2 Model with Layer Normalization
 - Version 3 Model with Group Normalization 
 
+- There must a single model.py file that includes GN/LN/BN and takes an argument to decide which normalization to include
+- A single notebook file to run all the 3 models above for 20 epochs each
+- Graph 1: Test/Validation Loss for all 3 models together
+- Graph 2: Test/Validation Accuracy for 3 models together
+- 10 misclassified images for each of the 3 models, as a 5x2 image matrix in 3 separately annotated images. 
+
+
 ## Approach
 
 The network class was modified to accept a parameter that would decide the type of normalization to be used.
