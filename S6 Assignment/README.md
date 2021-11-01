@@ -18,7 +18,10 @@ G - For group Normalization (Group of 4 per layer has been used for this assignm
 
 The Network class has been saved in a different file named as model.py
 A Notebook file was created to create 3 versions of the model.
-Model parameteres and output as below.
+
+For L1 regularization the Train function has been modified to use mse loss function. The predicted tensor output from the model has been reshaped(Used argmax) to match with the target tensor shape. This was needed to make it compatible with mse loss function. The train function has also been modified to return a list of train loss and train accuracy.
+
+The Test fucntion has been modified to return a list of test loss and test accuracy. This was needed to plot the graph for all 3 models.
 
 
 ## Model Summary
