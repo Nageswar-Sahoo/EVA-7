@@ -218,6 +218,8 @@ Estimated Total Size (MB): 0.47
 
 ## Misclassified Images
 
+### The details of predicted vs actual value and the corresponding image have been shown in the notebook. The below grid are list of 10 unclassified images by the 3 models.
+
 ### Images misclassified by Version -1 Model (BN + L1)
 ![](/Images/S6_Images/BN_Unclassified.jpg)
 ### Images misclassified by Version -2 Model (Layer Normalization)
